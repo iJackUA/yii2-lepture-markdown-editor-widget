@@ -42,5 +42,5 @@ Markdowneditor::widget(
 
 see on [official site](https://github.com/lepture/editor)
 
-## Available Marked options (markdown parser used by EpicEditor)
+## Available Marked options (markdown parser used by Lepture Editor)
 see on [official Marked site](https://github.com/chjj/marked)

@@ -1,0 +1,23 @@
+{
+	"name": "ijackua/yii2-lepture-markdown-editor-widget",
+	"description": "Yii2 widget for Lepture Markdown Editor (https://github.com/lepture/editor) - A markdown editor you really want",
+	"keywords": ["markdown", "editor", "lepture", "yii", "extension", "widget"],
+	"homepage": "https://github.com/iJackUA/yii2-lepture-markdown-editor-widget",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Evgeniy Kuzminov",
+			"email": "kyzminov@gmail.com",
+			"homepage" : "http://stdout.in"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"ijackua\\lepture\\": ""
+		}
+	}
+}

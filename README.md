@@ -38,9 +38,35 @@ Markdowneditor::widget(
 			])
 ```
 
-## Available options
+## Editor options
 
 see on [official site](https://github.com/lepture/editor)
 
-## Available Marked options (markdown parser used by Lepture Editor)
+```php
+use ijackua\lepture\Markdowneditor;
+
+Markdowneditor::widget(
+			[
+				'model' => $model,
+				'attribute' => 'full_text',
+				'leptureOptions' => [
+					'toolbar' => false
+				]
+			])
+```
+
+## Marked options (markdown parser used by Lepture Editor)
 see on [official Marked site](https://github.com/chjj/marked)
+
+```php
+use ijackua\lepture\Markdowneditor;
+
+Markdowneditor::widget(
+			[
+				'model' => $model,
+				'attribute' => 'full_text',
+				'markedOptions' => [
+					'tables' => false
+				]
+			])
+```

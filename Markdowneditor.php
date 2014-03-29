@@ -49,10 +49,6 @@ class Markdowneditor extends InputWidget
 		if (empty($this->leptureOptions['element'])) {
 			$this->leptureOptions['element'] = new JsExpression('$("#' . $this->id . '")[0]');
 		}
-
-		$jsonOptionsMarked = Json::encode($this->markedOptions);
-		$script = 'marked.setOptions(' . $jsonOptionsMarked . ');';
-		$this->view->registerJs($script);
 	}
 
 	public function run()
@@ -71,9 +67,12 @@ class Markdowneditor extends InputWidget
 
 	public function registerScripts()
 	{
+		$jsonOptionsMarked = Json::encode($this->markedOptions);
+		$script = 'marked.setOptions(' . $jsonOptionsMarked . ');';
+		$this->view->registerJs($script);
+
 		$jsonOptions = Json::encode($this->leptureOptions);
 		$varName = Inflector::classify('editor' . $this->id);
-
 		$script = "var {$varName} = new Editor(" . $jsonOptions . "); {$varName}.render();";
 		$this->view->registerJs($script);
 	}
